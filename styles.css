@@ -14,7 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    margin-top: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 5px;
     gap: 20px;
 
 }
@@ -22,17 +23,30 @@ body {
     display: flex;
     flex-direction: column;
     width: 200px;
+    z-index: 0;
+    position: relative;
     
 }
 .left .header {
     background-color: hsl(246, 80%, 60%);
     padding: 20px;
-    border-radius: 5px;
-    height: 200px;
+    border-radius: 10px;
+    height: 270px;
+    margin-bottom: -20px;
 }  
+.left .header:hover {
+    background-color: hsl(246, 78%, 55%);
+    cursor: pointer;
+}
+.left .timeframe {
+    background-color: hsl(235, 46%, 20%);
+    padding: 20px;
+    border-radius:5px;
+    height: 250px;
+}
 .left .header > h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 26px;
+    margin-top: 10px;
     font-weight: lighter;
     color: white;
 }
@@ -40,49 +54,57 @@ body {
     font-size: 14px;
     color: hsl(236, 100%, 87%);
     font-weight: 100;
+    margin-bottom: 10px;
 }
 .left .timeframe {
     background-color: hsl(235, 46%, 20%);
-    
+    border-radius:15px;
     padding: 20px;
-    border-radius:5px;
-    height: 150px;
 }
-.left .timeframe p {
-    margin-top: 20px;
-    font-size: 14px;
+.left .timeframe:hover {
+    background-color: hsl(228, 39%, 17%);
 }
 .left .timeframe > p {
+    margin-top: 35px;
     font-size: 14px;
     color: hsl(236, 100%, 87%);
     font-weight: 500;
 }
 .left .header > img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     margin-right: 20px;
     margin-bottom: 25px;
     border: 2px solid white;
 }
+.left .header>img:hover {
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
+}
 .right {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap:20px;
+    row-gap: 20px;
 }
-.card {
+.right .card {
     background-color: hsl(235, 46%, 20%);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 20px;
-    width: 250px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    width: 200px;
+    height: 200px;
+    margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
-    /* border-top: 30px solid hsl(246, 80%, 60%); */
 }
+.right .card:hover {
+    background-color: hsl(228, 39%, 17%);
+    cursor: pointer;
+}
+    
 
-.right > .card > .card-header {
+.right > .right-con .card > .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,28 +137,63 @@ body {
     z-index: 0;
 
 }
-.right > .right-con > .right-icon {
-    background-color: hsl(15, 100%, 70%);
+
+.right > .right-con > .right-icon-work {
+    background-color:hsl(15, 100%, 70%);
     background-image: url(images/icon-work.svg);
     background-repeat: no-repeat;
-    background-size: 30px;
     background-position: top right;
-    border-radius: 5px;
-    height: 50px;
+    border-radius: 15px;
+    height: 25%;
     margin-bottom: -20px;
 }
-.right>.right-con>.right-icon :hover {
-    transform: scaleY(1.2);
-    transition: all 0.3s ease-in-out;
+.right>.right-con>.right-icon-play {
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-radius: 15px;
+    height: 25%;
+    margin-bottom: -20px;
 }
-.right > .right-con > .right-icon > img {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    display:flex ;
-    justify-content: flex-end;
+.right>.right-con>.right-icon-study {
+     background-color: hsl(348, 100%, 68%);
+     background-image: url(images/icon-study.svg);
+     background-repeat: no-repeat;
+     background-position: top right;
+     border-radius: 15px;
+     height: 25%;
+     margin-bottom: -20px;
+ }
+ .right>.right-con>.right-icon-exe {
+     background-color: hsl(145, 58%, 55%);
+     background-image: url(images/icon-exercise.svg);
+     background-repeat: no-repeat;
+     background-position: top right;
+     border-radius: 15px;
+     height: 25%;
+     margin-bottom: -20px;
+ }
+.right>.right-con>.right-icon-social {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-radius: 15px;
+    height: 25%;
+    margin-bottom: -20px;
+}
 
+.right>.right-con>.right-icon-self {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-radius: 15px;
+    height: 25%;
+    margin-bottom: -20px;
+}
+.right>.right-con :hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
 }
