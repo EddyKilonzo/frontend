@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 6rem;
+    gap: 20px;
+
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+}
+.left .header {
+    background-color: hsl(246, 80%, 60%);
+    padding: 20px;
+    border-radius: 5px;
+    height: 200px;
+}  
+.left .header > h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    color: white;
+}
+.left .header > p {
+    font-size: 14px;
+    color: hsl(236, 100%, 87%);
+    font-weight: 100;
+}
+.left .timeframe {
+    background-color: hsl(235, 46%, 20%);
+    
+    padding: 20px;
+    border-radius:5px;
+    height: 150px;
+}
+.left .timeframe p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.left .timeframe > p {
+    font-size: 14px;
+    color: hsl(236, 100%, 87%);
+    font-weight: 500;
+}
+.left .header > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+}
+.right {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.card {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-wrap: wrap;
+    /* border-top: 30px solid hsl(246, 80%, 60%); */
+}
+
+.right > .card > .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    
+ 
+}
+.card > .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card > .card-content > h6 {
+    font-family: "Rubik", sans serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: hsl(236, 100%, 87%);
+}
+.card > .card-content > p {
+    font-size: 14px;
+    color: hsl(236, 100%, 87%);
+    font-weight: lighter;
+}
+.right > .right-con {
+    /* background-color: hsl(236, 85%, 43%); */
+    position: relative;
+    z-index: 0;
+
+}
+.right > .right-con > .right-icon {
+    background-color: hsl(15, 100%, 70%);
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: top right;
+    border-radius: 5px;
+    height: 50px;
+    margin-bottom: -20px;
+}
+.right>.right-con>.right-icon :hover {
+    transform: scaleY(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.right > .right-con > .right-icon > img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display:flex ;
+    justify-content: flex-end;
+
+}
